@@ -41,7 +41,6 @@ def senddata():
     
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect(("127.0.0.1", 8089))
-        # s.sendall(b'Hello, world')
         send(s.sendall, b'Hello, world')
         data = recv(s.recv)
         print(data)
